@@ -1,0 +1,318 @@
+@import url(reset.css);
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(236.85deg, #041832 27.26%, #3468a7 96.03%);
+    color: #f6f6f6e7;
+}
+
+#barra-lateral {
+    position: fixed;
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #f6f6f6e7;
+}
+
+#barra-lateral > #btn-tema {
+    margin-bottom: 5%;
+    margin-left: 5%; 
+    width: 30%;
+    background: #ecf4ff;
+    border-radius: 100px;
+    border: 2px solid #0e1d2f;
+    cursor: pointer;
+}
+
+
+#barra-lateral > #nav-menu {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+#barra-lateral > #nav-menu > li:hover, #barra-lateral > #btn-tema:hover {
+    box-shadow: 0.5px 1px 1px 1px rgba(0, 0, 0, 0.19), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+#barra-lateral > #nav-menu > li {
+    width: 100%;
+    height: auto;
+    text-decoration: none;
+    color: black;
+    margin-top: 5%;
+    padding-left: 3%;
+    display: flex;
+    align-items: flex-end;
+    font-size: 1.2rem;
+
+}
+
+#barra-lateral > #nav-menu > li .label-lateral {
+    color: #f6f6f6e7;
+}
+
+span {
+    color: #f6f6f6e7;
+}
+.content {
+    position: fixed;
+    width: 80%;
+    height: 100%;
+    left: 20%;
+    overflow: auto;
+}
+
+form#fClientes, form#fProdutos, form#fPedidos {
+    width: 35em;
+    height: auto;
+    border: 1px solid lightgray;
+    margin: 0 auto;
+    margin-top: 2%;
+    padding: 0.5%;
+}
+
+form#fPedidos {
+    width: 50em;
+}
+
+form#fClientes > fieldset, form#fProdutos > fieldset, form#fPedidos > fieldset {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 2%;
+
+}
+
+form#fClientes > fieldset > label, form#fProdutos > fieldset > label, 
+form#fPedidos > fieldset > label {
+    position: relative;
+    left: 1%;
+    padding: 1% 0 0.5% 1%;
+    display: block;
+}
+
+form#fPedidos > fieldset > label {
+    font-size: 1.3rem;
+}
+
+form#fClientes > fieldset > .txtField, form#fProdutos > fieldset > .txtField, 
+form#fPedidos > fieldset > .txtField {
+    width: 95.7%;
+    height: 3em;
+    margin-left: 2%;
+    font-weight: bold;
+    color: black;
+}
+
+form#fClientes > fieldset > #dataCad {
+    cursor: text;
+}
+
+form#fClientes > fieldset > #codCliente, form#fProdutos > fieldset > #codProduto, 
+form#fPedidos > fieldset > #nomeDoCliente {
+    color: gray;
+}
+form#fPedidos > fieldset > #codigoCliente {
+    width: 96.8%;
+    cursor: pointer;
+}
+
+form#fClientes > div.subDivCabecalho, form#fProdutos > div.subDivCabecalho, 
+form#fPedidos > div.subDivCabecalho {
+    width: 100%;
+    padding-left: 3%;
+    padding-bottom: 2.5%;
+    padding-top: 2%;
+}
+
+form#fClientes > div.subDivCabecalho > label.labelClientes, form#fProdutos > div.subDivCabecalho > 
+label.labelProdutos, form#fPedidos > div.subDivCabecalho > label.labelPedidos{
+    width: 100%;
+    position: relative;
+    left: 1%;
+    text-decoration: underline;
+    font-size: 1.7rem;
+    font-weight: bold;
+    
+}
+
+label.closeIcon {
+    position: relative;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+    left: 77%;
+    cursor: pointer;    
+}
+
+label.closeIcon:hover {
+    text-shadow: 2px 2px 5px rgb(240, 111, 240);
+}
+
+form#fProdutos > div.subDivCabecalho > label.closeIcon {
+    left: 74%;
+}
+
+form#fPedidos > div.subDivCabecalho > label.closeIcon {
+    left: 83%;
+}
+
+div.botoesCliente, div.botoesProdutos {
+    width: 100%;
+    height: 3em;
+    margin: 0 auto;
+    padding-left: 3.8%;
+}
+
+button#btnVoltar, button#btnAvancar {
+    background-color: blueviolet;
+    border: none;
+    color: #fff;
+    width: 4em;
+    height: 2.3em;
+    border-radius: 10%;
+    font-weight: bold;
+    cursor: pointer; 
+}
+
+button#btnVoltar:hover, button#btnAvancar:hover, button#btnNovo:hover, button#btnSalvar:hover {
+    box-shadow: 0 2px 3px 0 rgba(211, 27, 27, 0.377), 0 3px 10px 0 rgba(0, 0, 0, 0.19);   
+}
+
+button#btnNovo {
+    position: relative;
+    background-color: dodgerblue;
+    border: none;
+    color: #fff;
+    width: 7em;
+    height: 2.3em;
+    border-radius: 10%;
+    left: 39.2%;
+    cursor: pointer;
+}
+
+button#btnSalvar {
+    position: relative;
+    background-color: seagreen;
+    border: none;
+    color: #fff;
+    width: 7em;
+    height: 2.3em;
+    border-radius: 10%;
+    left: 39.2%;
+    cursor: pointer;
+}
+
+div.locProduto {
+    width: 92.5%;
+    height: 5em;
+    margin: 2% 0 0.5% 4%;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
+
+div.locProduto > label, div.itensPedido > label {
+    position: relative;
+    top: 5%;
+    color: darkblue;
+    font-weight: bold;
+}
+div.locProduto > div.subDivLocProduto {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    height: 60%;
+    background-color: rgba(156, 173, 189, 0.418);
+}
+
+select#codigosItem {
+    width: 6%;
+    height: 60%;
+}
+
+#descItem {
+    height: 50%;
+}
+
+#precoItem, #quantItem, #lancarPedido, #descItem, select#codigosItem  {
+    position: relative;
+    top: 13%;
+    left: 0.3%;
+}
+
+select#codigosItem {
+    cursor: pointer;
+}
+
+#lancarPedido {
+    width: 35%;
+    height: 62%;
+    font-weight: bold;
+}
+
+#lancarPedido:hover {
+    cursor: pointer;
+}
+
+#precoItem, #quantItem {
+    width: 15%;
+    height: 50%;
+}
+
+div.itensPedido{
+    width: 92.5%;
+    height: auto;
+    margin: 1% 0 2% 4%;
+}
+
+table {
+    width: 100%;
+    height: 3.7em;
+    text-align: left;
+}
+th {
+    font-weight: bold;
+}
+
+option {
+    cursor: pointer;
+}
+
+#lblValorTotal {
+    left: 92%; 
+    color: red;
+    border-radius: 15%;
+    background-color: rgba(105, 165, 165, 0.452);
+}
+
+
+.dark {
+    background: linear-gradient(236.85deg, #375b86 27.26%, #6b87a9 96.03%);
+}
+  
+.dark main {
+    background: #333439;
+} 
+
+.dark #barra-lateral {
+    background: #333439;
+} 
+
+.dark #barra-lateral > #nav-menu > li:hover, .dark #barra-lateral > #btn-tema:hover {
+    box-shadow: 0.5px 1px 1px 1px rgba(238, 232, 232, 0.233), 0 3px 10px 0 rgba(238, 232, 232, 0.233);
+}
+
+.dark .txtField {
+    background-color: #f6f6f6d8;
+}

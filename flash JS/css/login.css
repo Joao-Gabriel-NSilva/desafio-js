@@ -1,0 +1,54 @@
+@import url(reset.css);
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+@media screen and (max-width:325px) {
+    main > form#login{
+        width: 70%;
+    }
+}
+
+form#login {
+    border: 1px solid lightgray;
+}
+form#login > fieldset {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0.5%;
+
+}
+
+form#login > fieldset > label {
+    padding: 1%;
+    display: block;
+    margin-left: 1%;
+}
+
+form#login > fieldset > #btnLogin {
+    width: 93.5%;
+    height: 4em;
+    background-color: #3c97fe;
+    color: #fff;
+    margin: 2% 2% 2% 2.9%;
+    border: none;
+    cursor: pointer;
+
+}
+
+form#login > fieldset > #btnLogin:hover {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+form#login > fieldset > .txtField{
+    width: 90%;
+    margin: 2% 2% 2% 2.9%;
+    padding: 1%;
+}

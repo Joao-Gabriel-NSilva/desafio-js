@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,300,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,300,1,-25" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,100,1,0" />                    
+    <link rel="stylesheet" href="css/panel.css">
+    <script type="module" src="script/modulo-panel.js"></script>
+    <title>Painel - FlashJS</title>
+</head>
+
+<body>
+    <main>
+        <nav id="barra-lateral">
+            <ul id="nav-menu">
+                <li id="mostra-cliente">
+                    <span class="material-symbols-outlined">
+                    group_add
+                    </span> <label class="label-lateral">Clientes</label> 
+                </li>
+                <li id="mostra-produto">
+                    <span class="material-symbols-outlined">
+                        redeem
+                    </span><label class="label-lateral">Produtos</label> 
+                </li>
+                <li id="mostra-pedidos">
+                    <span class="material-symbols-outlined">
+                        shopping_cart
+                    </span><label class="label-lateral">Pedidos</label> 
+                </li>
+            </ul>
+            <button type="button" id="btn-tema">Alterar tema</button>
+        </nav>
+        <div class="content" >
+            <form method="post" id="fClientes" hidden>
+                <div class="subDivCabecalho">
+                    <label class="labelClientes">Clientes</label>
+                    <label class="closeIcon">X</label>
+                </div>
+                <fieldset>
+                    <label for="codCliente">Código</label>
+                    <input type="number" disabled id="codCliente" name="codCliente" class="txtField" value="">
+                    <label for="nomeCliente">Nome</label>
+                    <input type="text" required id="nomeCliente" name="nomeCliente" class="txtField" value="">
+                    <label for="dataCad">Data Cadastro</label>
+                    <input type="date" required id="dataCad" name="dataCad" class="txtField" value="">
+                </fieldset>
+
+                <div class="botoesCliente">
+                    <button type="button" id="btnVoltar"><</button>
+                    <button type="button" id="btnAvancar">></button>
+                    <button type="button" id="btnNovo">Novo</button>
+                    <button type="button" id="btnSalvar">Salvar</button>
+
+                </div>
+                
+            </form>
+
+            <form method="post" id="fProdutos" hidden>
+                <div class="subDivCabecalho">
+                    <label class="labelProdutos">Produtos</label>
+                    <label class="closeIcon">X</label>
+                </div>
+                <fieldset>
+                    <label for="codProduto">Código</label>
+                    <input type="number" disabled id="codProduto" value="" name="codProduto" class="txtField">
+                    <label for="descProduto">Descrição</label>
+                    <input type="text" required id="descProduto" value="" name="descProduto" class="txtField">
+                    <label for="precoProduto">Preço</label>
+                    <input type="text" required id="precoProduto" value="" name="precoProduto" class="txtField">
+                    <label for="quantProduto">Quantidade</label>
+                    <input type="text" required id="quantProduto" value="" name="quantProduto" class="txtField">
+                </fieldset>
+
+                <div class="botoesProdutos">
+                    <button type="button" id="btnVoltar"><</button>
+                    <button type="button" id="btnAvancar">></button>
+                    <button type="button" id="btnNovo">Novo</button>
+                    <button type="button" id="btnSalvar">Salvar</button>
+
+                </div>
+                
+            </form>
+
+            <form method="post" id="fPedidos" hidden>
+                <div class="subDivCabecalho">
+                    <label class="labelPedidos">Pedidos</label>
+                    <label class="closeIcon">X</label>
+                </div>
+
+                <fieldset>
+                    <label for="codCliente">Código do Cliente</label>
+                    <select required name="codItem" id="codigoCliente" class="txtField">
+                        <option id="nomeEmBranco" value=""></option>
+                      </select>
+                    <label for="nomeCliente">Cliente</label>
+                    <input type="text" disabled id="nomeDoCliente" value="" name="nomeCliente" class="txtField">
+                </fieldset>
+
+                <div class="locProduto">
+                    <label>Localizar produto</label>
+                    <div class="subDivLocProduto">
+                        <select required name="codItem" id="codigosItem">
+                            <option id="opcEmBranco" value=""></option>
+                        </select>
+                        <input type="text" id="descItem" value="" name="descItem" class="" disabled>
+                        <input type="text" id="precoItem" value="" name="precoItem" class="" disabled>
+                        <input type="text" required id="quantItem" value="" name="quantItem" class="" placeholder="Quantidade">
+                        <button type="button" id="lancarPedido" >Lançar no Pedido</button>
+                    </div> <br>
+                </div>
+                <div class="itensPedido">
+                    <label>Itens do Pedido</label> <br><br>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Descrição</th>
+                                <th>Preço</th>
+                                <th>Qtd</th>
+                                <th>Sub Total</th>                        
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <label id="lblValorTotal"></label>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
